@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title Facecast
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/assets/css/main.css')
+
+  body.left-sidebar
+    div#page-wrapper
+      div(class="wrapper", id="header-wrapper")
+        div#header
+            div#logo
+                h1 FACECAST
+            nav#nav
+              ul
+                li
+                  a(href='/', id='top-link', class='icon fa-home')
+                li
+                  a(href='/offres') &nbsp;Offres
+                li
+                  a(href='/figurants') &nbsp;Figurants
+                li
+                  a(href='/candidatures') &nbsp;Candidatures   
+
+    block content
+    
+    script(src="assets/js/jquery.min.js")
+    script(src="assets/js/jquery.dropotron.min.js")
+    script(src="assets/js/skel.min.js")
+    script(src="assets/js/skel-viewport.min.js")
+    script(src="assets/js/util.js")
+    script(src="assets/js/main.js")
+          

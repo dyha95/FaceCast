@@ -1,0 +1,19 @@
+extends layout
+
+block content  
+    div(class="wrapper style2")
+        div.title Liste des figurants
+        div(id="main", class="container")
+            div#content
+                article(class="box post")
+                    header.style1
+                        table
+                            tr
+                                th Nom
+                                th Prenom
+                                th Email
+                                each figurant, i in listeFigurants
+                                    tr
+                                        td=figurant.nom
+                                        td=figurant.prenom
+                                        td=figurant.email

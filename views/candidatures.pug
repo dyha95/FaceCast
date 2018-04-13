@@ -1,0 +1,29 @@
+extends layout
+
+block content  
+    div(class="wrapper style2")
+        div.title Liste des candidatures
+        div(id="main", class="container")
+            div#content
+                article(class="box post")
+                    header.style1
+                        table
+                            tr
+                                th Figurant
+                                th Offre
+                                th Etat
+                                th Changer l'état
+                                each candidature, i in listeCandidatures
+                                    tr
+                                        td=candidature.figurant.nom
+                                        td=candidature.offre.nom
+                                        td=candidature.etat
+                                        td
+                                            form(action='../candidatures/update/'+candidature._id, method="post")
+                                                select(name="etat")
+                                                    option(value="En attente") "En attente"
+                                                    option(value="Accepté") "Accepté"
+                                                    option(value="Refusé") "Refusé"
+                                                    option(value="Retenu") "Retenu"
+                                                    option(value="Terminé") "Terminé"
+                                                input(type="submit")

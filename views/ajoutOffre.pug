@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    div(class="wrapper style2")
+        div.title Ajouter une offre
+        div(id="main", class="container")
+            div#content
+                article(class="box post")
+                    form(action="../offres/addOffer", method="post")
+                        div.field
+                            label Nom
+                            input(type='text', name="nomOffre")
+                        div.field
+                            label Type
+                            select(name="type")
+                                option(value="Spectacle") Spectacle
+                                option(value="Film") Film
+                        div.field
+                            label Date
+                            input(type='text', name="date")
+                        div.field
+                            label Nombre de jours
+                            input(type='text', name="nbJour")
+                        div.field
+                            label Nombre de figurants
+                            input(type='text', name="nbFigurants")
+                        div.field
+                            label Rôle
+                            input(type='text', name="role")
+                        br
+                        input(type='submit' class="button style1")

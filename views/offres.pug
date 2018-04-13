@@ -1,0 +1,38 @@
+extends layout
+
+block content    
+    div(class="wrapper style2")
+            div.title Liste des offres
+            div(id="main", class="container")
+                div#content
+                    article(class="box post")
+                        header.style1
+                            table
+                                tr
+                                    th Nom
+                                    th Type
+                                    th Date
+                                    th Nombre de jours
+                                    th Nombre de figurants
+                                    th Rôle demandé
+                                    th Supprimer
+                                    th Modifier
+                                    each offre, i in listeOffres
+                                        tr
+                                            td=offre.nom
+                                            td=offre.type
+                                            td=offre.date
+                                            td=offre.nbJours
+                                            td=offre.nbFigurants
+                                            td=offre.roleDemande
+                                            td 
+                                                a(href='../offres/deleteOffer/'+offre._id)
+                                                    span(class='icon fa-eraser')
+                                            td 
+                                                a(href='../updateOffre/'+offre._id)
+                                                    span(class='icon fa-wrench')
+
+                            a(
+                            href='/offres/ajoutOffre' 
+                            class="button style1"
+                            ) Ajouter une offre
